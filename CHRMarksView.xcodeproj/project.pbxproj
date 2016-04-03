@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BE591A91CB0BDD300636101 /* CHRMarks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE591A81CB0BDD300636101 /* CHRMarks.m */; };
+		2BE591AC1CB0C86000636101 /* CHRMarksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE591AB1CB0C86000636101 /* CHRMarksView.m */; };
+		2BE591AF1CB0DC9F00636101 /* CHRMarkCenterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE591AE1CB0DC9F00636101 /* CHRMarkCenterLayer.m */; };
+		2BE591B21CB0EE9B00636101 /* CHRMarkTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE591B11CB0EE9B00636101 /* CHRMarkTextLayer.m */; };
 		3869890A1CAE3DC900C1EF67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 386989091CAE3DC900C1EF67 /* main.m */; };
 		3869890D1CAE3DC900C1EF67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3869890C1CAE3DC900C1EF67 /* AppDelegate.m */; };
 		386989101CAE3DC900C1EF67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3869890F1CAE3DC900C1EF67 /* ViewController.m */; };
@@ -16,6 +20,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BE591A71CB0BDD300636101 /* CHRMarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRMarks.h; sourceTree = "<group>"; };
+		2BE591A81CB0BDD300636101 /* CHRMarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRMarks.m; sourceTree = "<group>"; };
+		2BE591AA1CB0C86000636101 /* CHRMarksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRMarksView.h; sourceTree = "<group>"; };
+		2BE591AB1CB0C86000636101 /* CHRMarksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRMarksView.m; sourceTree = "<group>"; };
+		2BE591AD1CB0DC9F00636101 /* CHRMarkCenterLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRMarkCenterLayer.h; sourceTree = "<group>"; };
+		2BE591AE1CB0DC9F00636101 /* CHRMarkCenterLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRMarkCenterLayer.m; sourceTree = "<group>"; };
+		2BE591B01CB0EE9B00636101 /* CHRMarkTextLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRMarkTextLayer.h; sourceTree = "<group>"; };
+		2BE591B11CB0EE9B00636101 /* CHRMarkTextLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRMarkTextLayer.m; sourceTree = "<group>"; };
 		386989051CAE3DC900C1EF67 /* CHRMarksView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHRMarksView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386989091CAE3DC900C1EF67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3869890B1CAE3DC900C1EF67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +51,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BE591A61CB0BDC200636101 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2BE591A71CB0BDD300636101 /* CHRMarks.h */,
+				2BE591A81CB0BDD300636101 /* CHRMarks.m */,
+				2BE591AA1CB0C86000636101 /* CHRMarksView.h */,
+				2BE591AB1CB0C86000636101 /* CHRMarksView.m */,
+				2BE591AD1CB0DC9F00636101 /* CHRMarkCenterLayer.h */,
+				2BE591AE1CB0DC9F00636101 /* CHRMarkCenterLayer.m */,
+				2BE591B01CB0EE9B00636101 /* CHRMarkTextLayer.h */,
+				2BE591B11CB0EE9B00636101 /* CHRMarkTextLayer.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		386988FC1CAE3DC900C1EF67 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +85,7 @@
 		386989071CAE3DC900C1EF67 /* CHRMarksView */ = {
 			isa = PBXGroup;
 			children = (
+				2BE591A61CB0BDC200636101 /* Classes */,
 				3869890B1CAE3DC900C1EF67 /* AppDelegate.h */,
 				3869890C1CAE3DC900C1EF67 /* AppDelegate.m */,
 				3869890E1CAE3DC900C1EF67 /* ViewController.h */,
@@ -149,9 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE591B21CB0EE9B00636101 /* CHRMarkTextLayer.m in Sources */,
+				2BE591A91CB0BDD300636101 /* CHRMarks.m in Sources */,
+				2BE591AF1CB0DC9F00636101 /* CHRMarkCenterLayer.m in Sources */,
 				386989101CAE3DC900C1EF67 /* ViewController.m in Sources */,
 				3869890D1CAE3DC900C1EF67 /* AppDelegate.m in Sources */,
 				3869890A1CAE3DC900C1EF67 /* main.m in Sources */,
+				2BE591AC1CB0C86000636101 /* CHRMarksView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +332,7 @@
 				3869891E1CAE3DC900C1EF67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
