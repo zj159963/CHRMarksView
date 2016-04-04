@@ -30,6 +30,7 @@
 {
     self = [super init];
     if (self) {
+        self.needsDisplayOnBoundsChange = YES;
         _innerOvalRadiusFractor = 0.8;
         _shapeColor = [UIColor redColor].CGColor;
         _breathingColor = _shapeColor;
@@ -71,31 +72,7 @@
     _backgroundLayer.fillColor = backgroundLayerColor;
 }
 
-- (void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-
-    self.path = nil;
-    self.shapeLayer.path = nil;
-    self.animationLayer.path = nil;
-    self.backgroundLayer.path = nil;
-    [self.animationLayer removeAllAnimations];
-
-    self.path = [UIBezierPath bezierPathWithOvalInRect:frame].CGPath;
-
-    self.backgroundLayer.frame = self.bounds;
-    self.backgroundLayer.path = [UIBezierPath bezierPathWithOvalInRect:frame].CGPath;
-
-    self.animationLayer.frame = self.bounds;
-    self.animationLayer.path = [UIBezierPath bezierPathWithOvalInRect:frame].CGPath;
-
-    [self.animationLayer addAnimation:[self p_makeBreathingAnimation] forKey:nil];
-
-    self.shapeLayer.frame = CGRectInset(frame, frame.size.width * (1.0 -self.innerOvalRadiusFractor),  frame.size.height * (1.0 - self.innerOvalRadiusFractor));
-    self.shapeLayer.path = [UIBezierPath bezierPathWithOvalInRect:self.shapeLayer.bounds].CGPath;
-}
-
-- (CAAnimationGroup *)p_makeBreathingAnimation
+- (CAAnimationGroup *)p_createBreathingAnimation
 {
     CAAnimationGroup *breathing = [CAAnimationGroup animation];
     breathing.fillMode = kCAFillModeBackwards;
@@ -116,7 +93,32 @@
 #pragma mark - UIApplicationWillEnterForegroundNotification
 - (void)p_handleApplicationWillEnterForegroundNotification:(NSNotification *)notification
 {
-    [self.animationLayer addAnimation:[self p_makeBreathingAnimation] forKey:nil];
+    [self.animationLayer addAnimation:[self p_createBreathingAnimation] forKey:nil];
+}
+
+#pragma mark - LayoutSublayers
+- (void)layoutSublayers
+{
+    [super layoutSublayers];
+
+    self.path = nil;
+    self.shapeLayer.path = nil;
+    self.animationLayer.path = nil;
+    self.backgroundLayer.path = nil;
+    [self.animationLayer removeAllAnimations];
+
+    self.path = [UIBezierPath bezierPathWithOvalInRect:self.bounds].CGPath;
+
+    self.backgroundLayer.frame = self.bounds;
+    self.backgroundLayer.path = [UIBezierPath bezierPathWithOvalInRect:self.bounds].CGPath;
+
+    self.animationLayer.frame = self.bounds;
+    self.animationLayer.path = [UIBezierPath bezierPathWithOvalInRect:self.bounds].CGPath;
+
+    [self.animationLayer addAnimation:[self p_createBreathingAnimation] forKey:nil];
+
+    self.shapeLayer.frame = CGRectInset(self.bounds, self.bounds.size.width * (1.0 -self.innerOvalRadiusFractor),  self.bounds.size.height * (1.0 - self.innerOvalRadiusFractor));
+    self.shapeLayer.path = [UIBezierPath bezierPathWithOvalInRect:self.shapeLayer.bounds].CGPath;
 }
 
 @end

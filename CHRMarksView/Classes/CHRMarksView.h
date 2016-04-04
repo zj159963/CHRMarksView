@@ -14,8 +14,8 @@
 @protocol CHRMarksViewDelegate <NSObject>
 
 @optional
-- (void)marksView:(nonnull CHRMarksView *)marksView didSelectTextLayer:(nonnull CATextLayer *)textLayer;
-- (void)marksView:(nonnull CHRMarksView *)marksView didSelectCenterLayer:(nonnull CAShapeLayer *)centerLayer;
+- (void)marksView:(nonnull CHRMarksView *)marksView didSelectTextLayer:(nonnull CALayer *)textLayer;
+- (void)marksView:(nonnull CHRMarksView *)marksView didSelectCenterLayer:(nonnull CALayer *)centerLayer;
 
 @end
 

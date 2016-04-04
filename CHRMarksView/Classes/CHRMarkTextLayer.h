@@ -10,15 +10,15 @@
 
 typedef NS_ENUM(NSUInteger, CHRMarkTextLayerStyle)
 {
-    CHRMarkTextLayerStyleLeftSharp,
-    CHRMarkTextLayerStyleRightSharp,
+    CHRMarkTextLayerStyleSharpLeft,
+    CHRMarkTextLayerStyleSharpRight,
 };
 
 @interface CHRMarkTextLayer : CALayer
 
 @property (nonatomic, copy, readwrite, nonnull) NSString *text; // Defualt is @""
 @property (nonatomic, assign, readwrite, nonnull) CGColorRef textColor; // Default is white
-@property (nonatomic, assign, readwrite) CHRMarkTextLayerStyle sharpStyle;
+@property (nonatomic, assign, readwrite) CHRMarkTextLayerStyle sharpStyle; // Default is Left
 @property (nonatomic, assign, readwrite) CGFloat fontSize;
 
 @end

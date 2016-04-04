@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B29B6F81CB2927D0046903E /* CHRMarkConnectionLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29B6F71CB2927D0046903E /* CHRMarkConnectionLayer.m */; };
 		2BE591A91CB0BDD300636101 /* CHRMarks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE591A81CB0BDD300636101 /* CHRMarks.m */; };
 		2BE591AC1CB0C86000636101 /* CHRMarksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE591AB1CB0C86000636101 /* CHRMarksView.m */; };
 		2BE591AF1CB0DC9F00636101 /* CHRMarkCenterLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE591AE1CB0DC9F00636101 /* CHRMarkCenterLayer.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B29B6F61CB2927D0046903E /* CHRMarkConnectionLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRMarkConnectionLayer.h; sourceTree = "<group>"; };
+		2B29B6F71CB2927D0046903E /* CHRMarkConnectionLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRMarkConnectionLayer.m; sourceTree = "<group>"; };
 		2BE591A71CB0BDD300636101 /* CHRMarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRMarks.h; sourceTree = "<group>"; };
 		2BE591A81CB0BDD300636101 /* CHRMarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRMarks.m; sourceTree = "<group>"; };
 		2BE591AA1CB0C86000636101 /* CHRMarksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRMarksView.h; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				2BE591AE1CB0DC9F00636101 /* CHRMarkCenterLayer.m */,
 				2BE591B01CB0EE9B00636101 /* CHRMarkTextLayer.h */,
 				2BE591B11CB0EE9B00636101 /* CHRMarkTextLayer.m */,
+				2B29B6F61CB2927D0046903E /* CHRMarkConnectionLayer.h */,
+				2B29B6F71CB2927D0046903E /* CHRMarkConnectionLayer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B29B6F81CB2927D0046903E /* CHRMarkConnectionLayer.m in Sources */,
 				2BE591B21CB0EE9B00636101 /* CHRMarkTextLayer.m in Sources */,
 				2BE591A91CB0BDD300636101 /* CHRMarks.m in Sources */,
 				2BE591AF1CB0DC9F00636101 /* CHRMarkCenterLayer.m in Sources */,
